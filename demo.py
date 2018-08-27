@@ -25,8 +25,7 @@ print("%d solutions found:"%(n_solutions))
 joint_configs = np.asarray(joint_configs).reshape(n_solutions,n_joints)
 for joint_config in joint_configs:
     print(joint_config)
+
+# Check cycle-consistency of forward and inverse kinematics
 assert(np.any([np.sum(np.abs(joint_config-np.asarray(joint_angles))) < 1e-4 for joint_config in joint_configs]))
 print("\nTest passed!")
-# joint_configs = ur5_kin.inverse([0.04071115,-0.99870914,0.03037599,0.472,
-#                                 -0.99874455,-0.04156303,-0.02796067,0.12648243,
-#                                 0.0291871,-0.02919955,-0.99914742,0.43451169])
