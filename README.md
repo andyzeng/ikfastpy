@@ -39,7 +39,7 @@ This implementation requires the following dependencies (tested on Ubuntu 16.04.
 
  **Important**: ensure all rotation matrices are valid before feeding into IKFast, otherwise no IK solution will be detected. R is a rotation matrix if and only if R is orthogonal, i.e. RR<sup>T</sup> = R<sup>T</sup>R = I, and det(R) = 1.
 
- **Note**: IKFast does not return solutions for singularities. In most cases, an approximate IK solution can be found by slightly perturbing the target end effector pose before computing IK solutions.
+ **Note**: IKFast does not return solutions for singularities. In most cases, an approximate IK solution can be found for singularities by slightly perturbing the target end effector pose before re-computing IK solutions.
 
 ## Modifying Robot Kinematics with OpenRave
 
