@@ -28,6 +28,8 @@ This implementation requires the following dependencies (tested on Ubuntu 16.04.
 
 1. Checkout this repository and compile the Cython wrapper:
     ```shell
+    git clone https://github.com/andyzeng/ikfastpy.git
+    cd ikfastpy
     python setup.py build_ext --inplace
     ```
 1. Run the demo:
