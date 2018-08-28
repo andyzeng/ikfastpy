@@ -2,7 +2,7 @@
 
 <img src="images/closed-loop-grasping.gif" height=200px align="right" />
 
-This is a lightweight Python wrapper over [OpenRave's](http://openrave.org/) generated [IKFast](http://openrave.org/docs/0.8.2/openravepy/ikfast/) C++ executables for a UR5 robot arm. IKFast <i>"analytically solves robot inverse kinematics equations and generates optimized C++ files"</i> for fast runtime speeds (more about IKFast [here](http://openrave.org/docs/0.8.2/openravepy/ikfast/)). IKFast can be used in tandem with [URScript](http://www.sysaxes.com/manuels/scriptmanual_en_3.1.pdf) `speedj` commands on UR robot arms for real-time motion planning, which was used to create the visual servoing demo shown on the right. Why `speedj`? See this UR [performance analysis report](http://orbit.dtu.dk/files/105275650/ur10_performance_analysis.pdf).
+This is a lightweight Python wrapper over [OpenRave's](http://openrave.org/) generated [IKFast](http://openrave.org/docs/0.8.2/openravepy/ikfast/) C++ executables for a UR5 robot arm. IKFast <i>"analytically solves robot inverse kinematics equations and generates optimized C++ files"</i> for fast runtime speeds (more about IKFast [here](http://openrave.org/docs/0.8.2/openravepy/ikfast/)). IKFast can be used in tandem with [URScript](http://www.sysaxes.com/manuels/scriptmanual_en_3.1.pdf) `speedj` commands on UR robot arms for real-time motion planning, which was used to create the visual servoing demo shown on the right (as part of an ongoing project on closed-loop grasping with deep nets). Why `speedj`? See this UR [performance analysis report](http://orbit.dtu.dk/files/105275650/ur10_performance_analysis.pdf).
 
 Note: this package can be [easily modified](#modifying-robot-kinematics-with-openrave) to support other robot arms.
 
@@ -32,7 +32,7 @@ This implementation requires the following dependencies (tested on Ubuntu 16.04.
     cd ikfastpy
     python setup.py build_ext --inplace
     ```
-1. Run the demo:
+1. Run the demo in Python to test FK and IK calls to IKFast:
     ```shell
     python demo.py
     ```
