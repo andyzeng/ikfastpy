@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!-- UR5 kinematic body -->
+
+<KinBody name="ur5">
+
+  <Body name="link0" type="dynamic">
+    <translation>0 0 0</translation>
+    <rotationaxis>1 0 0 0</rotationaxis>
+    <Geom type="box">
+      <translation>0 0 0</translation>
+      <Extents>0.05 0.03 0.01</Extents>
+      <diffusecolor>1.0 0.341 0.349</diffusecolor>
+    </Geom>
+  </Body>
+
+  <Body name="link1" type="dynamic">
+    <offsetfrom>link0</offsetfrom>
+    <translation>0 -0.138 0.163</translation>
+    <quat>0 -0.7071 0 0.7071</quat>
+    <Geom type="box">
+      <translation>0 0 0</translation>
+      <Extents>0.03 0.03 0.01</Extents>
+      <diffusecolor>0.949 0.557 0.169</diffusecolor>
+    </Geom>
+  </Body>
+
+  <Joint name="joint1" type="hinge">
+    <Body>link0</Body>
+    <Body>link1</Body>
+    <offsetfrom>link0</offsetfrom>
+    <axis>0 0 1</axis>
+    <limitsdeg>-360 360</limitsdeg>
+    <maxvel>3</maxvel>
+    <weight>1</weight>
+    <resolution>1</resolution>
+  </Joint>
+
+  <Body name="link2" type="dynamic">
+    <offsetfrom>link1</offsetfrom>
+    <translation>0 -0.131 0.425</translation>
+    <rotationaxis>1 0 0 0</rotationaxis>
+    <Geom type="box">
+      <translation>0 0 0</translation>
+      <Extents>0.01 0.01 0.01</Extents>
+      <diffusecolor>0.929 0.788 0.282</diffusecolor>
+    </Geom>
+  </Body>
+
+  <Joint name="joint2" type="hinge">
+    <Body>link1</Body>
+    <Body>link2</Body>
+    <offsetfrom>link1</offsetfrom>
+    <axis>0 1 0</axis>
+    <limitsdeg>-360 360</limitsdeg>
+    <weight>1</weight>
+    <maxvel>3</maxvel>
+    <resolution>1</resolution>
+  </Joint>
+
+  <Body name="link3" type="dynamic">
+    <offsetfrom>link2</offsetfrom>
+    <translation>0 0 0.392</translation>
+    <rotationaxis>1 0 0 0</rotationaxis>
+    <Geom type="box">
+      <translation>0 0 0</translation>
+      <Extents>0.01 0.01 0.01</Extents>
+      <diffusecolor>0.349 0.631 0.310</diffusecolor>
+    </Geom>
+  </Body>
+
+  <Joint name="joint3" type="hinge">
+    <Body>link2</Body>
+    <Body>link3</Body>
+    <offsetfrom>link2</offsetfrom>
+    <axis>0 1 0</axis>
+    <limitsdeg>-360 360</limitsdeg>
+    <weight>1</weight>
+    <maxvel>3</maxvel>
+    <resolution>1</resolution>
+  </Joint>
+
+  <Body name="link4" type="dynamic">
+    <offsetfrom>link3</offsetfrom>
+    <translation>0 0.127 0</translation>
+    <rotationaxis>0 1 0 90</rotationaxis>
+    <Geom type="box">
+      <translation>0 0 0</translation>
+      <Extents>0.01 0.01 0.01</Extents>
+      <diffusecolor>0.306 0.475 0.655</diffusecolor>
+    </Geom>
+  </Body>
+
+  <Joint name="joint4" type="hinge">
+    <Body>link3</Body>
+    <Body>link4</Body>
+    <offsetfrom>link3</offsetfrom>
+    <axis>0 1 0</axis>
+    <limitsdeg>-360 360</limitsdeg>
+    <weight>1</weight>
+    <maxvel>3</maxvel>
+    <resolution>1</resolution>
+  </Joint>
+
+  <Body name="link5" type="dynamic">
+    <offsetfrom>link4</offsetfrom>
+    <translation>0 0 0.100</translation>
+    <rotationaxis>1 0 0 0</rotationaxis>
+    <Geom type="box">
+      <translation>0 0 0</translation>
+      <Extents>0.01 0.01 0.01</Extents>
+      <diffusecolor>0.690 0.478 0.631</diffusecolor>
+    </Geom>
+  </Body>
+
+  <Joint name="joint5" type="hinge">
+    <Body>link4</Body>
+    <Body>link5</Body>
+    <offsetfrom>link4</offsetfrom>
+    <axis>0 0 1</axis>
+    <limitsdeg>-360 360</limitsdeg>
+    <weight>1</weight>
+    <maxvel>3</maxvel>
+    <resolution>1</resolution>
+  </Joint>
+
+  <Body name="link6" type="dynamic">
+    <offsetfrom>link5</offsetfrom>
+    <translation>0 0.100 0</translation> <!-- end effector offset can be added here -->
+    <rotationaxis>-1 0 0 90</rotationaxis>
+    <Geom type="box">
+      <translation>0 0 0</translation>
+      <Extents>0.01 0.01 0.01</Extents>
+      <diffusecolor>1.0 0.616 0.655</diffusecolor>
+    </Geom>
+  </Body>
+
+  <Joint name="joint6" type="hinge">
+    <Body>link5</Body>
+    <Body>link6</Body>
+    <offsetfrom>link5</offsetfrom>
+    <axis>0 1 0</axis>
+    <limitsdeg>-360 360</limitsdeg>
+    <weight>1</weight>
+    <maxvel>3</maxvel>
+    <resolution>1</resolution>
+  </Joint>
+
+</KinBody>
