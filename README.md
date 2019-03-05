@@ -21,7 +21,7 @@ This implementation requires the following dependencies (tested on Ubuntu 16.04.
 
  * [NumPy](http://www.numpy.org/), [Cython](http://cython.org/). You can quickly install/update these dependencies by running the following:
     ```shell
-    pip install numpy Cython
+    pip install --user numpy Cython
     ```
 
 ## Quick Start
