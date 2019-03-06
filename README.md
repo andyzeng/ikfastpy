@@ -61,3 +61,31 @@ This implementation requires the following dependencies (tested on Ubuntu 16.04.
     ```shell
     python `openrave-config --python-dir`/openravepy/_openravepy_/ikfast.py --robot=ur5.robot.xml --iktype=transform6d --baselink=0 --eelink=6 --savefile=ikfast61.cpp --maxcasedepth 1
     ```
+
+### Citation
+
+If you find [IKFast](http://openrave.org/docs/0.8.2/openravepy/ikfast/) useful, please cite [OpenRave](http://openrave.org/):
+
+```
+@phdthesis{diankov_thesis,
+  author = "Rosen Diankov",
+  title = "Automated Construction of Robotic Manipulation Programs",
+  school = "Carnegie Mellon University, Robotics Institute",
+  month = "August",
+  year = "2010",
+  number= "CMU-RI-TR-10-29",
+  url={http://www.programmingvision.com/rosen_diankov_thesis.pdf},
+}
+```
+
+This module was also a part of the [Visual Pushing and Grasping Toolbox](https://github.com/andyzeng/visual-pushing-grasping). If you find this code useful in your work, please consider citing:
+
+```
+@inproceedings{zeng2018learning,
+  title={Learning Synergies between Pushing and Grasping with Self-supervised Deep Reinforcement Learning},
+  author={Zeng, Andy and Song, Shuran and Welker, Stefan and Lee, Johnny and Rodriguez, Alberto and Funkhouser, Thomas},
+  booktitle={IEEE/RSJ International Conference on Intelligent Robots and Systems (IROS)},
+  year={2018}
+}
+```
+
