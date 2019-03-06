@@ -62,7 +62,7 @@ This implementation requires the following dependencies (tested on Ubuntu 16.04.
     python `openrave-config --python-dir`/openravepy/_openravepy_/ikfast.py --robot=ur5.robot.xml --iktype=transform6d --baselink=0 --eelink=6 --savefile=ikfast61.cpp --maxcasedepth 1
     ```
 
-### Citation
+## Citation
 
 If you find [IKFast](http://openrave.org/docs/0.8.2/openravepy/ikfast/) useful, please cite [OpenRave](http://openrave.org/):
 
@@ -78,7 +78,7 @@ If you find [IKFast](http://openrave.org/docs/0.8.2/openravepy/ikfast/) useful, 
 }
 ```
 
-This module was also a part of the [Visual Pushing and Grasping Toolbox](https://github.com/andyzeng/visual-pushing-grasping). If you find this code useful in your work, please consider citing:
+This module was also a part of [Visual Pushing and Grasping](https://github.com/andyzeng/visual-pushing-grasping). If you find it useful in your work, please consider citing:
 
 ```
 @inproceedings{zeng2018learning,
